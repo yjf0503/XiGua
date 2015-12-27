@@ -1,0 +1,455 @@
+﻿/*#region       imports */
+
+@import "jspm_packages/github/twbs/bootstrap-sass@3.3.6/assets/stylesheets/bootstrap";
+
+/*#endregion    imports */
+
+/*#region       colors */
+
+$color-base: #212121;
+$color-black: #000000;
+$color-gray-dark: #323a45;
+$color-gray: #5b616b;
+$color-gray-light: #aeb0b5;
+$color-gray-lighter: #d6d7d9;
+$color-gray-lightest: #f1f1f1;
+$color-gray-warm-dark: #494440;
+$color-gray-warm-light: #e4e2e0;
+$color-gray-cool-light: #dce4ef;
+$color-white: #ffffff;
+.color-base {
+    color: $color-base;
+}
+.color-gray {
+    color: $color-gray;
+}
+
+$color-red: #e31c3d;
+$color-red-darkest: #981b1e;
+$color-red-dark: #cd2026;
+$color-red-light: #e59393;
+$color-red-lightest: #f9dede;
+
+$color-red-weibo: #f50001;
+
+.color-red-weibo {
+    color: $color-red-weibo;
+}
+
+$color-gold: #fdb81e;
+$color-gold-light: #f9c642;
+$color-gold-lighter: #fad980;
+$color-gold-lightest: #fff1d2;
+
+$color-green: #2e8540;
+$color-green-light: #4aa564;
+$color-green-lighter: #94bfa2;
+$color-green-lightest: #e7f4e4;
+
+$color-green-wechat: #76a70a;
+
+.color-green-wechat {
+    color: $color-green-wechat;
+}
+
+$color-blue: #0071bc;
+$color-blue-darkest: #112e51;
+$color-blue-darker: #205493;
+
+$color-blue-alt: #02bfe7;
+$color-blue-alt-darkest: #046b99;
+$color-blue-alt-dark: #00a6d2;
+$color-blue-alt-light: #9bdaf1;
+$color-blue-alt-lightest: #e1f3f8;
+
+$color-blue-cool: #205493;
+$color-blue-cool-light: #4773aa;
+$color-blue-cool-lighter: #8ba6ca;
+$color-blue-cool-lightest: #dce4ef;
+
+$color-blue-outlook: #2272b9;
+.color-blue-outlook {
+    color: $color-blue-outlook;
+}
+
+$color-blue-facebook: #3a5795;
+.color-blue-facebook {
+    color: $color-blue-facebook;
+}
+
+$color-blue-twitter: #55acee;
+.color-blue-twitter {
+    color: $color-blue-twitter;
+}
+
+$color-blue-focus: #3e94cf;
+$color-purple-visited: #4c2c92;
+
+$color-primary: $color-red;
+$color-primary-darkest: $color-red-darkest;
+$color-primary-dark: $color-red-dark;
+$color-primary-light: $color-red-light;
+$color-primary-lightest: $color-red-lightest;
+
+/*#endregion    colors */
+
+/*#region fonts*/
+/*Guidelines for fonts: https://msdn.microsoft.com/en-us/library/windows/apps/hh700394.aspx */
+
+@mixin segoe-ui-font {
+    font-family: wf_segoe-ui_normal,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Arial,sans-serif;
+}
+
+@mixin segoe-ui-light {
+    @include segoe-ui-font;
+    font-weight: 200;
+}
+
+@mixin segoe-ui-semilight {
+    @include segoe-ui-font;
+    font-weight: 300;
+}
+
+@mixin segoe-ui {
+    @include segoe-ui-font;
+    font-weight: 400;
+}
+
+@mixin segoe-ui-semibold {
+    @include segoe-ui-font;
+    font-weight: 600;
+}
+
+@mixin segoe-ui-bold {
+    @include segoe-ui-font;
+    font-weight: 700;
+}
+
+.font-header {
+    @include segoe-ui-light;
+    font-size: 46px;
+    line-height: 56px;
+}
+
+.font-header-bold {
+    @extend .font-header;
+    @include segoe-ui-semibold;
+}
+
+.font-subheader {
+    @include segoe-ui-light;
+    font-size: 34px;
+    line-height: 40px;
+}
+
+.font-title {
+    @include segoe-ui-semilight;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.font-subtitle {
+    @include segoe-ui;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.font-base {
+    @include segoe-ui-semibold;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.font-body {
+    @include segoe-ui;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.font-caption {
+    @include segoe-ui;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+/* #endregion   fonts*/
+
+/*#region       global */
+
+body {
+    color: $color-base;
+    @extend .font-body;
+    font-size: 2em;
+    line-height: 1.6em;
+    min-height: 2000px;
+    padding-top: 160px;
+    padding-bottom: 100px;
+}
+
+a {
+    @include segoe-ui;
+    color: $color-blue;
+}
+
+.margin-top-bottom-12 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.divider-main {
+    border-color: $color-gray;
+}
+
+.divider-secondary {
+    border-color: $color-gray-light;
+}
+
+/*#endregion    global */
+
+/* #region      global nav */
+
+.navbar-fixed-top {
+    box-shadow: 0 2px 4px $gray-light;
+    background-color: $color-white;
+    line-height: 1em;    
+}
+
+.navbar-global {
+    background-color: $color-gray-lightest;
+}
+
+.navbar-subjects {
+    .nav-justified > li {
+        @extend .font-body-base;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .nav-justified > li > a {
+        color: $color-black;
+    }
+
+    .nav-justified > .active > a,
+    .nav-justified > .active > a:hover,
+    .nav-justified > .active > a:focus {
+        color: $color-red;
+        background-color: $color-white;
+    }
+}
+
+/* #endregion   global nav */
+
+/*#region       buttons */
+.btn-primary {
+    @extend .font-body;
+    background-color: $color-blue;
+    border: none;
+}
+
+
+/*#endregion    buttons */
+
+/* #region      home */
+.main-content {
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .category{
+        font-size: 1.1em;
+        a {
+            color: $color-red;
+        }
+    }
+
+    .title {
+        @extend .font-subheader-font;
+        font-weight: 500;
+        margin-top: 10px;
+        margin-bottom: 5px;
+
+        a {
+            color: $color-black;
+        }
+    }
+
+    .author {
+        a {
+            color: $color-black;
+        }
+    }
+
+    .article-of-the-day {
+        text-align: center;
+    }
+
+    .top-three-articles {
+        text-align: center;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        img {
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 1.5em;
+        }
+
+        .col-divider {
+            border-left: 1px solid;
+            border-right: 1px solid;
+            @extend .divider-secondary;
+        }
+    }
+
+    .category-articles {
+
+        .category-icon {
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 60px;
+
+            i {
+                margin-bottom: 10px;
+            }
+
+            a {
+                color: $color-gray;
+            }
+        }
+
+        .date {
+            text-align: right;
+        }
+
+        .category {
+            text-align: right;
+        }
+
+        .title {
+            font-size: 1.5em;
+            text-align: left;
+            margin-top: 0;
+        }
+
+        .article {
+            margin-bottom: 40px;
+        }
+    }
+}
+/* #endregion   home */
+
+/*#region       article full */
+
+.article-full {
+    a.category {
+        color: $color-red;
+    }
+
+    .date {
+        color: $color-gray;
+    }
+
+    .author {
+        @extend .font-title;
+        @extend .text-center;
+        color: $color-gray;
+    }
+
+    .article-info {
+        i {
+            color: $color-gray;
+            margin-right: 4px;
+        }
+
+        .bookmarks {
+            a {
+                margin-right: 4px;
+            }
+        }
+
+        margin-bottom: 40px;
+    }
+
+    .article-img {
+        @extend .font-caption-font;
+        color: $color-gray;
+        margin-bottom: 40px;
+
+        img {
+            @extend .img-responsive;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+    }
+
+    .article-body {
+
+        margin-bottom: 20px;
+
+        p {
+            text-indent: 40px;
+            margin-bottom: 20px;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        .article-body-img {
+            @extend .article-img;
+            border-top: 1px solid $color-gray-light;
+            border-bottom: 1px solid $color-gray-light;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        a {
+            color: $color-base;
+            border-bottom: 2px solid $color-blue-alt-light;
+            box-shadow: inset 0 -5px 0 $color-blue-alt-light;
+            text-decoration: none;
+            padding-bottom: 4px;
+        }
+
+        a:hover, a:active {
+            background: $color-blue-alt-light;
+        }
+    }
+
+    .article-info-bottom {
+        .btn {
+            margin-top: 12px;
+        }
+    }
+
+    .article-author {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-top: 8px solid $color-blue-alt-light;
+        border-bottom: 1px solid $color-gray-light;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        .author-img {
+            width: 100%;
+        }
+
+        i {
+            margin-right: 4px;
+            margin-left: 8px;
+        }
+    }
+}
+
+/*#endregion    article full */
