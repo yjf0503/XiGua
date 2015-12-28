@@ -8,6 +8,7 @@
 //Test 2
 //Another Test
 //Test 3
+//Test 4
 get_header(); ?>
 
 	<div id="primary" class="content-area">
