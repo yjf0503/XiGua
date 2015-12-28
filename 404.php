@@ -7,6 +7,7 @@
 //Test Git GUI  By:Jiefu Yang
 //Test 2
 //Another Test
+//Test 3
 get_header(); ?>
 
 	<div id="primary" class="content-area">
