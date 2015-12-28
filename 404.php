@@ -6,6 +6,7 @@
  */
 //Test Git GUI  By:Jiefu Yang
 //Test 2
+//Another Test
 get_header(); ?>
 
 	<div id="primary" class="content-area">
