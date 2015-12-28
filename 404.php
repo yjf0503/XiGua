@@ -5,6 +5,7 @@
  * @package xigua
  */
 //Test Git GUI  By:Jiefu Yang
+//Test 2
 get_header(); ?>
 
 	<div id="primary" class="content-area">
